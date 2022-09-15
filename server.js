@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const mongodb = require('./db/conect');
+const mongodb = require('./db/connect');
 const port = 3000
 
 app.use('/', require('./routes'))
