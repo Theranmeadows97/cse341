@@ -1,4 +1,0 @@
-// ********FOR LOCAL HOST*******////
-
-//stephanie Meadows
-GET http://localhost:3000/contacts/632259f5d24715981e5bc870
