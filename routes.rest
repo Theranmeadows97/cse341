@@ -1,7 +1,7 @@
 // ********FOR LOCAL HOST*******////
 
 //Penny Meadows
-GET http://localhost:3000/Contacts/6324947ebc6e30a032947ad8
+GET http://localhost:3000/ContactData/Contacts/6324947ebc6e30a032947ad8
 
 // ALL CONTACTS
-GET http://localhost:3000/Contacts
+GET http://localhost:3000/ContactData/
