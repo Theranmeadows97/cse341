@@ -1,20 +1,21 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getUser = async (req, res, next) => {
-  const result = await mongodb.getDb().db().collection('user').find();
-  result.toArray().then((lists) => {
+const getContacts = async (req, res) => {
+  const data = await mongodb.getDb().db('ContactData').collection('Contacts').find();
+  data.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
 };
 
-const getUsername = async (req, res, next) => {
-  const result = await mongodb.getDb().db().collection('user').find();
-  result.toArray().then((lists) => {
+const getContact = async (req, res) => {
+  const contactId = new ObjectId(req.params.id);
+  const data = await mongodb.getDb().db('ContactData').collection('Contacts').find({_id: contactId});
+  data.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists[0].username);
+    res.status(200).json(lists[0]);
   });
 };
 
-module.exports = { getUser, getUsername };
+module.exports = { getContacts, getContact };
