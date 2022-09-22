@@ -40,3 +40,53 @@ PUT http://localhost:3000/ContactData/Contacts
 ##DELETE CONTACT
 
 DELETE http://localhost:3000/ContactData/Contacts
+
+
+
+##RENDER
+
+## ALL CONTACTS
+GET https://cse341test-568i.onrender.com/contacts
+
+##ONE CONTACT///
+
+##Stephanie Meadows
+GET https://cse341test-568i.onrender.com/contacts/632ba61070513f0dc4b1a16c
+
+##Penny Meadows
+GET https://cse341test-568i.onrender.com/contacts/632ba6b270513f0dc4b1a16e
+
+##Brodie Meadows
+GET https://cse341test-568i.onrender.com/contacts/632ba6fc70513f0dc4b1a16f
+
+
+##CREATE NEW CONTACT
+POST https://cse341test-568i.onrender.com/contacts HTTP/1.1
+Content-Type: : application.application/json
+
+{
+    "firstname": "Imposter",
+    "lastname": "Meadows",
+    "email": "Imposter@family.com",
+    "favoritecolor": "black",
+    "birthday": "01/01/2000"
+}
+
+
+##UPDATE CONTACT
+PUT https://cse341test-568i.onrender.com/contacts
+
+{
+    "firstname": "Berdeen",
+    "lastname": "Meadows",
+    "email": "ammaMeadows@family.com",
+    "favoritecolor": "yellow",
+    "birthday": "10/24/1963"
+}
+
+##DELETE CONTACT
+
+DELETE https://cse341test-568i.onrender.com/contacts
+
+
+
