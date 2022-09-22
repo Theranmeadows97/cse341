@@ -1,7 +1,42 @@
-// ********FOR LOCAL HOST*******////
+## ALL CONTACTS
+GET http://localhost:3000/ContactData
 
-//Penny Meadows
-GET http://localhost:3000/ContactData/Contacts/6324947ebc6e30a032947ad8/
+##ONE CONTACT///
 
-// ALL CONTACTS
-GET http://localhost:3000/ContactData/
+##Stephanie Meadows
+GET http://localhost:3000/ContactData/Contacts/632ba61070513f0dc4b1a16c
+
+##Penny Meadows
+GET http://localhost:3000/ContactData/Contacts/632ba6b270513f0dc4b1a16e
+
+##Brodie Meadows
+GET http://localhost:3000/ContactData/Contacts/632ba6fc70513f0dc4b1a16f
+
+
+##CREATE NEW CONTACT
+POST http://localhost:3000/ContactData/Contacts  HTTP/1.1
+Content-Type: : application.application/json
+
+{
+    "firstname": "Imposter",
+    "lastname": "Meadows",
+    "email": "Imposter@family.com",
+    "favoritecolor": "black",
+    "birthday": "01/01/2000"
+}
+
+
+##UPDATE CONTACT
+PUT http://localhost:3000/ContactData/Contacts 
+
+{
+    "firstname": "Berdeen",
+    "lastname": "Meadows",
+    "email": "ammaMeadows@family.com",
+    "favoritecolor": "yellow",
+    "birthday": "10/24/1963"
+}
+
+##DELETE CONTACT
+
+DELETE http://localhost:3000/ContactData/Contacts

@@ -9,7 +9,7 @@ require("dotenv").config();
 app.use(bodyParser.json()).use((req,res,next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
-}).use('/',require('./routes/index'));
+}).use('/',require('./routes'));
 
 mongodb.initDb((err, mongodb) => {
     if (err) {
