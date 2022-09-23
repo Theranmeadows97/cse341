@@ -1,68 +1,70 @@
-## ALL CONTACTS
-GET http://localhost:3000/ContactData
+//Local Host: 
+### All Contacts
+GET http://localhost:3000/Contacts
+ 
+# ONE CONTACT
+###Stephanie Meadows
+GET http://localhost:3000/contacts/632ba61070513f0dc4b1a16c HTTP/1.1
 
-##ONE CONTACT///
+###Penny Meadows
+GET http://localhost:3000/Contacts/632ba6b270513f0dc4b1a16e
 
-##Stephanie Meadows
-GET http://localhost:3000/ContactData/Contacts/632ba61070513f0dc4b1a16c
-
-##Penny Meadows
-GET http://localhost:3000/ContactData/Contacts/632ba6b270513f0dc4b1a16e
-
-##Brodie Meadows
-GET http://localhost:3000/ContactData/Contacts/632ba6fc70513f0dc4b1a16f
+###Brodie Meadows
+GET http://localhost:3000/Contacts/632ba6fc70513f0dc4b1a16f
 
 
-##CREATE NEW CONTACT
-POST http://localhost:3000/ContactData/Contacts  HTTP/1.1
-Content-Type: : application.application/json
+###CREATE NEW CONTACT
+POST http://localhost:3000/Contacts  HTTP/1.1
+Content-Type: application/json
 
 {
-    "firstname": "Imposter",
-    "lastname": "Meadows",
+    "firstName": "Imposter",
+    "lastName": "Meadows",
     "email": "Imposter@family.com",
-    "favoritecolor": "black",
+    "favoriteColor": "black",
     "birthday": "01/01/2000"
 }
 
 
-##UPDATE CONTACT
-PUT http://localhost:3000/ContactData/Contacts 
+###UPDATE CONTACT
+PUT http://localhost:3000/Contacts/632e1134450a23ab0e402fbf HTTP/1.1
+Content-Type: application/json
 
 {
-    "firstname": "Berdeen",
-    "lastname": "Meadows",
+    
+    "firstName": "Berdeen",
+    "lastName": "Meadows",
     "email": "ammaMeadows@family.com",
-    "favoritecolor": "yellow",
+    "favoriteColor": "yellow",
     "birthday": "10/24/1963"
 }
 
-##DELETE CONTACT
+###DELETE CONTACT
 
-DELETE http://localhost:3000/ContactData/Contacts
+DELETE http://localhost:3000/Contacts/632e1134450a23ab0e402fbf
 
 
 
-##RENDER
+///////////////////////RENDER/////////////////////
 
-## ALL CONTACTS
-GET https://cse341test-568i.onrender.com/contacts
+### ALL CONTACTS
+GET https://cse341test-568i.onrender.com/ContactData
 
 ##ONE CONTACT///
 
-##Stephanie Meadows
+###Stephanie Meadows
 GET https://cse341test-568i.onrender.com/contacts/632ba61070513f0dc4b1a16c
 
-##Penny Meadows
+###Penny Meadows
 GET https://cse341test-568i.onrender.com/contacts/632ba6b270513f0dc4b1a16e
 
-##Brodie Meadows
+###Brodie Meadows
 GET https://cse341test-568i.onrender.com/contacts/632ba6fc70513f0dc4b1a16f
 
 
-##CREATE NEW CONTACT
+###CREATE NEW CONTACT
 POST https://cse341test-568i.onrender.com/contacts HTTP/1.1
-Content-Type: : application.application/json
+Content-Type: application/json
 
 {
     "firstname": "Imposter",
@@ -73,7 +75,7 @@ Content-Type: : application.application/json
 }
 
 
-##UPDATE CONTACT
+###UPDATE CONTACT
 PUT https://cse341test-568i.onrender.com/contacts
 
 {
@@ -84,7 +86,7 @@ PUT https://cse341test-568i.onrender.com/contacts
     "birthday": "10/24/1963"
 }
 
-##DELETE CONTACT
+###DELETE CONTACT
 
 DELETE https://cse341test-568i.onrender.com/contacts
 

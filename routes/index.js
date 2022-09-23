@@ -1,12 +1,20 @@
-const routes = require('express').Router();
-const userController = require('../controllers/user');
+const express = require('express');
+const router = express.Router();
 
-routes.use('/', userController.getContacts);
-routes.use('/contacts', userController.getContact);
-//routes.use('/contacts',require('./contacts'));
+router.use('/contacts', require('./contacts'));
 
-// routes.get('/', (req, res) => {
-//     res.send('Stephanie Meadows');
-// });
+module.exports = router;
 
-module.exports = routes;
+
+// const routes = require('express').Router();
+// const userController = require('../controllers/user');
+
+// routes.use('/', userController.getContacts);
+// routes.use('/contacts', userController.getContact);
+// //routes.use('/contacts',require('./contacts'));
+
+// // routes.get('/', (req, res) => {
+// //     res.send('Stephanie Meadows');
+// // });
+
+// module.exports = routes;

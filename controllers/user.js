@@ -11,7 +11,7 @@ const getContacts = async (req, res) => {
 
 const getContact = async (req, res) => {
   const contactId = new ObjectId(req.params.id);
-  const data = await mongodb.getDb().db('ContactData').collection('Contacts').findOne({_id: contactId});
+  const data = await mongodb.getDb().db('ContactData').collection('Contacts').find({_id: contactId});
   data.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
@@ -24,7 +24,7 @@ const createContact = async (req, res) => {
     lastName: req.body.lastName,
     email: req.body.email,
     favoriteColor: req.body.favoriteColor,
-    birthday: req.body.favoriteColor
+    birthday: req.body.birthday
   };
   const response = await mongodb.getDb().db('ContactData').collection('Contacts').insertOne(newContact);
   if (response.acknowledged) {

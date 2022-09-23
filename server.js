@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 
 require("dotenv").config();
 
-app.use(bodyParser.json()).use((req,res,next) => {
+app.use(bodyParser.json()).use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 }).use('/',require('./routes'));
