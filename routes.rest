@@ -48,7 +48,7 @@ DELETE http://localhost:3000/Contacts/632e1134450a23ab0e402fbf
 ///////////////////////RENDER/////////////////////
 
 ### ALL CONTACTS
-GET https://cse341test-568i.onrender.com/ContactData
+GET https://cse341test-568i.onrender.com/Contacts
 
 ##ONE CONTACT///
 
@@ -76,7 +76,7 @@ Content-Type: application/json
 
 
 ###UPDATE CONTACT
-PUT https://cse341test-568i.onrender.com/contacts
+PUT https://cse341test-568i.onrender.com/contacts/632e1134450a23ab0e402fbe
 
 {
     "firstname": "Berdeen",
@@ -88,7 +88,7 @@ PUT https://cse341test-568i.onrender.com/contacts
 
 ###DELETE CONTACT
 
-DELETE https://cse341test-568i.onrender.com/contacts
+DELETE https://cse341test-568i.onrender.com/contacts/632e1134450a23ab0e402fbe
 
 
 
